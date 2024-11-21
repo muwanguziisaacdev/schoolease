@@ -3,19 +3,71 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --BGPRIMARYCOLOR: #f12d1f;
+  --BGBODYCOLOR: C23D28;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(199, 218, 235, 0.918);
+  position: relative;
+}
+
+.container-view {
+  @apply md:absolute md:top-[9vh] xl:top-[12vh] md:left-[26vh] xl:left-[32vh] right-2 h-screen rounded-md;
+}
+
+.chart {
+  @apply w-3/6 h-[350px] bg-slate-200 rounded-md
+}
+label h2 {
+  @apply text-sm text-purple-700 py-2
+}
+label input {
+  @apply bg-gray-950 py-2 px-4 rounded-md text-white text-xl
+}
+label input::placeholder {
+  @apply text-gray-500
+}
+table {
+  @apply w-[82%] m-auto text-white rounded-md;
+  background: #020214;
+  /* background-color: #fff5; */
+}
+thead {
+  @apply bg-[#020a33] text-xl;
+}
+tr {
+  height: 36px;
+}
+table, th, td {
+  border-collapse: collapse;
+  padding: 1rem;
+}
+td {
+  @apply text-center font-bold
+}
+
+.dots {
+  @apply flex gap-2 justify-center cursor-pointer;
+}
+.dots .dot {
+  width: .2rem;
+  height: .2rem;
+  background: white; 
+  border-radius: 50%;
+}
+
+.subjects-list li:first-child {
+  @apply text-green-500 bg-green-950
+}
+.subjects-list li:nth-child(2) {
+  @apply text-orange-500 bg-orange-900
+}
+.subjects-list li:nth-child(3) {
+  @apply text-red-500 bg-red-950
 }

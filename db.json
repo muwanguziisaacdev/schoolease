@@ -1,0 +1,31 @@
+{
+    "admins" : [
+        {
+            "id": 1,
+            "name": "Isaac Muwanguzi",
+            "studentClass": "S.4"
+        }
+    ],
+    "students" : [
+        {
+            "id": 1,
+            "name": "Isaac Muwanguzi",
+            "studentClass": "S.4"
+        }
+    ],
+    "teachers": [
+        {
+            "id": 1,
+            "name":"Opio Mutalife",
+            "subject": ["Mathematics", "Physics"],
+            "taughtClasses": ["S.4", "S.6"]
+        }
+    ],
+    "parents": [
+        {
+            "id": 1,
+            "name":"Opio Mutalife",
+            "childId": 1
+        }
+    ]
+}
